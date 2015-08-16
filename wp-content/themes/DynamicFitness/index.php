@@ -12,18 +12,17 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-		<script type="text/javascript">
-
-
-		</script>
-
 			<div class="row">
 
 				<ul class="bxslider">
 
 					<?php if (get_field ( 'slider' )) : while( has_sub_field( 'slider' )) : ?>
 
-						<li><img src="<?php $image = get_sub_field('slide_image'); echo $image['url']; ?>" class="img-responsive"/></li>
+						<li>
+
+							<img src="<?php $image = get_sub_field('slide_image'); echo $image['url']; ?>" class="img-responsive"/>
+
+						</li>
 
 					<?php  endwhile; endif; ?>
 

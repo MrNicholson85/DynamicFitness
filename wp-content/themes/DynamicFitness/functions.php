@@ -1,12 +1,12 @@
 <?php
 
-
 	// Load Theme CSS
 	function theme_styles(){
 
 		wp_enqueue_style( 'bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.css');
 		wp_enqueue_style( 'main', get_stylesheet_directory_uri() . '/css/df_style.css');
 		wp_enqueue_style( 'bxslider', get_stylesheet_directory_uri() . '/css/jquery.bxslider.css');
+
 	}
 	add_action( 'wp_enqueue_scripts', 'theme_styles' );
 
@@ -29,7 +29,5 @@
     'primary' => __( 'Primary Menu', 'THEMENAME' ),
 	
 	) );
-
-
 
 ?>
