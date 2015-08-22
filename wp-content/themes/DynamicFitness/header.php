@@ -4,6 +4,21 @@
 <meta charset="UTF-8">
 
 <title><?php bloginfo('name') ?></title>
+
+<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/jquery.bxslider.css">
+
+<script type="text/javascript">
+
+    $(document).ready(function(){
+  $('.bxslider').bxSlider({
+        mode: 'fade',
+        controls: 'true',
+        pager: 'false',
+    });
+});
+
+</script>
+
 <?php wp_head(); ?>
 </head>
 
@@ -27,7 +42,7 @@
 
                     </div>
 
-            <div id="header" class="col-lg-4">
+            <div id="header" class="col-lg-5">
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -61,7 +76,7 @@
 
             </div>
 
-            <div class="col-lg-4">
+            <div class="col-lg-3">
 
             <div class="header-social pull-right">
                 
