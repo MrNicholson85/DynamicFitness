@@ -87,20 +87,15 @@ a#cart{
   background-color: #ee7123;
 }
 
-.column {
+.caption {
      width: 100%;
     height: 795px;
     position: absolute;
 }
 
 .container {
-  text-align: center;
   height: 50%;
   position: relative;
-}
-
-.right .container {
-  height: 100%;
 }
 
 .vertical-align-wrap {

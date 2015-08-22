@@ -106,6 +106,10 @@ http://support.advancedcustomfields.com/
 
 == Changelog ==
 
+= 5.3.0 =
+* WYSIWYG field: Fixed 'Visual/Text' toggle bug with WP 4.3
+* Select field: Fixed Select2 bug hiding selected choices
+
 = 5.2.9 =
 * Field group: Added new 'status' setting to enable/disable
 * Field group: Added new 'description' setting shown to developers when viewing the field group list
@@ -119,6 +123,7 @@ http://support.advancedcustomfields.com/
 * Core: Added new setting 'export_textdomain' to add __() to generated export code
 * Core: Fixed conflict with Post Type Order plugin causing issues when querying posts
 * Core: Fixed conflict with WPML causing issues when querying posts
+* Core: Added compatibility for WP 4.3
 * Core: Minor fixes and improvements
 * Language: Updated German translation - thanks to Ralf Koller
 * Language: Updated Italian translation - thanks to Davide Pantè

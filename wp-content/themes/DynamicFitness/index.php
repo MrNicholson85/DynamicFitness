@@ -18,23 +18,36 @@ get_header(); ?>
 
 				<ul class="bxslider">
 
-					<?php if (get_field ( 'slider' )) : while( has_sub_field( 'slider' )) : ?>
+					<?php if (get_field ( 'slider' )) : while( has_sub_field( 'slider' )) :
+
+
+						//vars
+						$main_hero_image = get_sub_field('slide_image');
+						$hero_title = get_sub_field('slider_title');
+						$hero_message = get_sub_field('slider_message');
+						$hero_link = get_sub_field('slide_image');
+						$cap_placement = get_sub_field('caption_placement');
+
+
+					 ?>
 
 						<li>
 
-							<div class="column left">
+							<div class="caption">
 							  <div class="container">
 							    <div class="vertical-align-wrap">
-							      <div class="vertical-align vertical-align--middle">
-							        <h1>Programs &amp; Workouts</h1>
-							        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid</span>
+							      <div class="vertical-align vertical-align--middle <?php echo $caption_placement; ?>">
+							        <h1><?php echo $hero_title ?></h1>
+							        <span><?php echo $hero_message; ?></span>
+
 							        <a href="#">Learn More</a>
+
 							      </div>
 							    </div>
 							  </div>
 							</div>
 
-							<img src="<?php $image = get_sub_field('slide_image'); echo $image['url']; ?>" class="img-responsive"/>
+							<img src="<?php echo $main_hero_image['url']; ?>" class="img-responsive"/>
 
 						</li>
 
