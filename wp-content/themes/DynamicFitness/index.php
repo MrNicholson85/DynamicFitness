@@ -14,11 +14,25 @@ get_header(); ?>
 
 			<div class="row">
 
+				<div class="col-lg-12">
+
 				<ul class="bxslider">
 
 					<?php if (get_field ( 'slider' )) : while( has_sub_field( 'slider' )) : ?>
 
 						<li>
+
+							<div class="column left">
+							  <div class="container">
+							    <div class="vertical-align-wrap">
+							      <div class="vertical-align vertical-align--middle">
+							        <h1>Programs &amp; Workouts</h1>
+							        <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidid</span>
+							        <a href="#">Learn More</a>
+							      </div>
+							    </div>
+							  </div>
+							</div>
 
 							<img src="<?php $image = get_sub_field('slide_image'); echo $image['url']; ?>" class="img-responsive"/>
 
@@ -27,6 +41,8 @@ get_header(); ?>
 					<?php  endwhile; endif; ?>
 
 				</ul>
+
+			</div>
 
 			</div>
 
