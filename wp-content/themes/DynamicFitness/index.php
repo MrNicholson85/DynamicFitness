@@ -36,7 +36,10 @@ get_header(); ?>
 							<div class="caption">
 							  <div class="container">
 							    <div class="vertical-align-wrap">
-							      <div class="vertical-align vertical-align--middle <?php echo $caption_placement; ?>">
+
+
+							    	<div class="vertical-align <?php echo $cap_placement; ?>">
+
 							        <h1><?php echo $hero_title ?></h1>
 							        <span><?php echo $hero_message; ?></span>
 
