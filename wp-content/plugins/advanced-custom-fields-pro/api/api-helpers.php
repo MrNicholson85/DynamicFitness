@@ -694,10 +694,6 @@ function acf_verify_nonce( $value, $post_id = 0 ) {
 	}
 	
 	
-	// reset nonce (only allow 1 save)
-	$_POST['_acfnonce'] = false;
-	
-	
 	// if saving specific post
 	if( $post_id ) {
 		
@@ -705,31 +701,38 @@ function acf_verify_nonce( $value, $post_id = 0 ) {
 		$form_post_id = (int) acf_maybe_get( $_POST, 'post_ID' );
 		$post_parent = wp_is_post_revision( $post_id );
 		
-		
-		// if no $_POST['post_id'] (shopp plugin)
+			
+		// 1. no $_POST['post_id'] (shopp plugin)
 		if( !$form_post_id ) {
 			
-			// do nothing
+			// do nothing (don't remove this if statement!)
 			
-		// if $post_id is a match to the submitted form
+		// 2. direct match (this is the post we were editing)
 		} elseif( $post_id === $form_post_id ) {
 			
-			// do nothing, nonce is already reset (don't remove this if statement!)
+			// do nothing (don't remove this if statement!)
 			
-		// if $post_id is a revision of the submited form
+		// 3. revision (this post is a revision of the post we were editing)
 		} elseif( $post_parent === $form_post_id ) {
 			
-			// add nonce back in to allow 1 more save (when the real post is saved)
-			$_POST['_acfnonce'] = $nonce;
+			// return true early and prevent $_POST['_acfnonce'] from being reset
+			// this will allow another save_post to save the real post
+			return true;
 			
-		// if $post_id does not match either
+		// 4. no match (this post is a custom created one during the save proccess via either WP or 3rd party)
 		} else {
 			
+			// return false early and prevent $_POST['_acfnonce'] from being reset
+			// this will allow another save_post to save the real post
 			return false;
 			
 		}
 		
 	}
+	
+	
+	// reset nonce (only allow 1 save)
+	$_POST['_acfnonce'] = false;
 	
 	
 	// return
