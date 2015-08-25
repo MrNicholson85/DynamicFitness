@@ -7,19 +7,8 @@
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/jquery.bxslider.css">
 
-<script type="text/javascript">
-
-    $(document).ready(function(){
-  $('.bxslider').bxSlider({
-        mode: 'fade',
-        controls: 'true',
-        pager: 'false',
-    });
-});
-
-</script>
-
 <?php wp_head(); ?>
+
 </head>
 
 
@@ -32,17 +21,21 @@
         <div class="row">
 
             
-                    <div class="col-lg-4">
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
 
                         <div id="logo">
 
-                            <img src="<?php bloginfo('template_directory'); ?>/img/logo-lg.png" class="img-responsive" />
+                            <a href="<?php bloginfo('url'); ?>">
+                                
+                                <img src="<?php bloginfo('template_directory'); ?>/img/logo-lg.png" class="img-responsive" />
+
+                            </a>
 
                         </div>
 
                     </div>
 
-            <div id="header" class="col-lg-5">
+            <div id="df_header" class="col-lg-5 col-md-5 col-sm-8 col-xs-12">
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -65,7 +58,7 @@
                         'theme_location'    => 'primary',
                         'depth'             => 2,
                         'container'         => 'div',
-                        'container_class'   => 'collapse navbar-collapse',
+                        'container_class'   => 'collapse navbar-collapse pull-right',
                         'container_id'      => 'bs-example-navbar-collapse-1',
                         'menu_class'        => 'nav navbar-nav',
                         'fallback_cb'       => 'wp_bootstrap_navwalker::fallback',
@@ -76,7 +69,7 @@
 
             </div>
 
-            <div class="col-lg-3">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
 
             <div class="header-social pull-right">
                 
