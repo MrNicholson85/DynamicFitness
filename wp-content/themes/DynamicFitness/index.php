@@ -66,9 +66,11 @@ get_header(); ?>
 
 	<?php endif; ?>
 
-	<div class="container">
+	<div class="container fadeInBlock">
 
 		<h1>Home Page x</h1>
+
+		<p><?php the_content(); ?></p>
 
 	</div>
 

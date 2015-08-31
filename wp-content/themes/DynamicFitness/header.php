@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php bloginfo('name') ?></title>
 
 <link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/jquery.bxslider.css">
@@ -21,7 +21,7 @@
         <div class="row">
 
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6 col-sm-6">
 
             <div class="df_contact">
 
@@ -58,7 +58,7 @@
 
         </div>
 
-        <div class="col-lg-6">
+        <div class="col-lg-6 col-md-6 col-sm-6">
 
             <div class="df_search_login">
 
@@ -121,7 +121,7 @@
 
                     </div>
 
-            <div id="df_header" class="col-lg-5 col-md-5 col-sm-8 col-xs-12">
+            <div id="df_header" class="col-lg-5 col-md-5 col-sm-7 col-xs-12">
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
@@ -155,7 +155,7 @@
 
             </div>
 
-            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+            <div class="col-lg-3 col-md-3 col-sm-1 col-xs-12">
 
             <div class="header-social pull-right">
                 
