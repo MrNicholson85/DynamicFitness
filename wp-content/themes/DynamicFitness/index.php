@@ -12,14 +12,15 @@ get_header(); ?>
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<div class="row">
+			
 
 				<div class="col-lg-12">
+
+					<div class="row">
 
 				<ul class="bxslider">
 
 					<?php if (get_field ( 'slider' )) : while( has_sub_field( 'slider' )) :
-
 
 						//vars
 						$main_hero_image = get_sub_field('slide_image');
@@ -27,7 +28,6 @@ get_header(); ?>
 						$hero_message = get_sub_field('slider_message');
 						$hero_link = get_sub_field('slide_image');
 						$cap_placement = get_sub_field('caption_placement');
-
 
 					 ?>
 
