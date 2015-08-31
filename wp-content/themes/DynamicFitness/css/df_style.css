@@ -4,6 +4,14 @@ body{
   background-color: #ffff;
 }
 
+.white{
+  color: #ffffff;
+}
+
+.darkgray{
+  color: #5c5d5d;
+}
+
 .bxslider li{
 	display: block;
 }
@@ -359,6 +367,69 @@ ul, menu, dir {
 }
 
 }
+
+.top_ledge{
+  background-color: #5c5d5d;
+}
+
+.ledger-btn{
+  color: #ffffff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.ledger-btn:hover {
+    color: #ffffff;
+    background-color: #28bca5;
+    border-color: transparent;
+}
+
+.ledge-glyf{
+  padding-left: #5px;
+}
+
+
+.ledger-dd{
+  padding: 15px;
+}
+
+.screen-reader-text{
+  display: none;
+}
+
+#searchsubmit{
+  margin-left: -3px;
+}
+
+#df_phone{
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+#df_search #searchform{
+  margin-right: 30px;
+}
+
+#df_search #searchform #s{
+      border: transparent;
+    padding: 8px 5px;
+    background-color: darkgray;
+    color: #ffffff;
+}
+
+#df_search #searchform input#searchsubmit{
+  border: transparent;
+    margin-left: -4px;
+    padding: 8px 13px;
+    color: #ffffff;
+    background-color: #28bca5;
+
+}
+
+#df_phone, #df_contact_form{
+  display: inline-block;
+}
+
 
 @media (min-width: 1199px)
 #df_header .navbar-collapse {
