@@ -22,7 +22,6 @@ body{
 
 a#cart{
     background-color: #28bca5;
-    border-radius: 25px;
     height: 32px;
     width: 32px;
     float: left;
@@ -51,7 +50,6 @@ a#cart{
   height: 32px;
   background-color: #333333;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
-  border-radius: 25px;
 }
 .search-form .form-group input.form-control {
   padding-right: 20px;
@@ -291,6 +289,91 @@ vertical-align h1{
 
 
 
+.top_ledge{
+  background-color: #28bca5;
+  border-bottom: #0f8875 solid 2px;
+}
+
+.ledger-btn{
+  color: #ffffff;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.ledger-btn:hover {
+    color: #ffffff;
+    background-color: #28bca5;
+    border-color: transparent;
+}
+
+.ledge-glyf{
+  padding-left: #5px;
+}
+
+
+.ledger-dd{
+  padding: 15px;
+}
+
+.screen-reader-text{
+  display: none;
+}
+
+#searchsubmit{
+  margin-left: -3px;
+}
+
+#df_phone{
+  color: #ffffff;
+  margin-right: 10px;
+}
+
+#df_search #searchform{
+  margin-right: 28px;
+}
+
+#df_search #searchform #s{
+  border: transparent;
+  padding: 8px 5px;
+  background-color: #fff;
+  color: #5c5d5d;
+}
+
+#df_search #searchform input#searchsubmit{
+      border: transparent;
+    margin-left: -4px;
+    padding: 8px 13px;
+    color: #5c5d5d;
+    background-color: #fff;
+
+}
+
+#df_phone, #df_contact_form{
+  display: inline-block;
+}
+
+.df_contact .btn-default:focus,
+.df_contact .btn-default.focus {
+  color: #ffffff;
+  background-color: #28bca5;
+  border-color: transparent;
+}
+
+.df_search_login .btn-default:focus,
+.df_search_login .btn-default.focus{
+  color: #ffffff;
+  background-color: #28bca5;
+  border-color: transparent;
+
+}
+
+.fadeInBlock
+{
+    opacity:0;
+}
+
+
+
 /********* Overwrites ********/
 
 
@@ -355,6 +438,7 @@ ul, menu, dir {
     background-color: #28bca5;
 }
 
+
 @media (min-width: 992px){
 
 #df_header{
@@ -368,71 +452,143 @@ ul, menu, dir {
 
 }
 
-.top_ledge{
-  background-color: #5c5d5d;
+
+
+
+
+@media (min-width: 320px){
+  #df_header{
+    background-color: #5c5d5d;
+  }
+
+  .navbar-toggle {
+    position: relative;
+    float: none;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    background-image: none;
+    border: transparent;
+    border-radius: 0;
+    width: 100%;
 }
 
-.ledger-btn{
-  color: #ffffff;
-  background-color: transparent;
-  border-color: transparent;
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #5c5d5d;
 }
 
-.ledger-btn:hover {
-    color: #ffffff;
-    background-color: #28bca5;
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {
     border-color: transparent;
 }
-
-.ledge-glyf{
-  padding-left: #5px;
+.navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
 }
 
-
-.ledger-dd{
-  padding: 15px;
+.navbar-default .navbar-nav > li > a {
+    color: #fff;
 }
 
-.screen-reader-text{
-  display: none;
+.navbar-nav > li > a {
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
-#searchsubmit{
-  margin-left: -3px;
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #fff;
 }
-
-#df_phone{
-  color: #ffffff;
-  margin-right: 10px;
-}
-
-#df_search #searchform{
-  margin-right: 30px;
-}
-
-#df_search #searchform #s{
-      border: transparent;
-    padding: 8px 5px;
-    background-color: darkgray;
-    color: #ffffff;
-}
-
-#df_search #searchform input#searchsubmit{
-  border: transparent;
-    margin-left: -4px;
-    padding: 8px 13px;
-    color: #ffffff;
-    background-color: #28bca5;
 
 }
 
-#df_phone, #df_contact_form{
-  display: inline-block;
+@media (min-width: 768px){
+
+  #df_header .navbar-collapse {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#df_header{
+    background-color: transparent;
+  }
+
+
+.navbar-default .navbar-nav > li > a {
+    color: #5c5d5d;
+}
+
+.navbar-nav > li > a {
+    padding: 35px 15px;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #5c5d5d;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{
+  color: #fff;
+}
+
+  
+}
+
+@media (min-width: 1024px){
+
+  #df_header .navbar-collapse {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#df_header{
+    background-color: transparent;
+  }
+
+
+.navbar-default .navbar-nav > li > a {
+    color: #5c5d5d;
+}
+
+.navbar-nav > li > a {
+    padding: 35px 15px;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #5c5d5d;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{
+  color: #fff;
 }
 
 
-@media (min-width: 1199px)
+}
+
+@media (min-width: 1199px){
 #df_header .navbar-collapse {
-    padding-right: 15px;
-    padding-left: 15px;
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+#df_header{
+    background-color: transparent;
+  }
+
+
+.navbar-default .navbar-nav > li > a {
+    color: #5c5d5d;
+}
+
+.navbar-nav > li > a {
+    padding: 35px 15px;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a {
+    color: #5c5d5d;
+}
+
+.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover{
+  color: #fff;
+}
+
+
 }

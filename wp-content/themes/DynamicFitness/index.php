@@ -66,9 +66,29 @@ get_header(); ?>
 
 	<?php endif; ?>
 
-	<div class="container">
+	<div class="social_container">
+
+		<div class="container">
+
+			<div class="row">
+
+				<ul>
+
+					<li>Social Here</li>
+
+				</ul>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="container fadeInBlock">
 
 		<h1>Home Page x</h1>
+
+		<p><?php the_content(); ?></p>
 
 	</div>
 
