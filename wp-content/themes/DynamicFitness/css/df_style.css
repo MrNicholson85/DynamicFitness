@@ -330,6 +330,7 @@ vertical-align h1{
 
 #df_search #searchform{
   margin-right: 28px;
+  float: right;
 }
 
 #df_search #searchform #s{
@@ -339,6 +340,10 @@ vertical-align h1{
   color: #5c5d5d;
 }
 
+#df_login, #df_search{
+  float: right;
+}
+
 #df_search #searchform input#searchsubmit{
       border: transparent;
     margin-left: -4px;
@@ -346,6 +351,10 @@ vertical-align h1{
     color: #5c5d5d;
     background-color: #fff;
 
+}
+
+.header-search, header-search-btn{
+  display: inline-block;
 }
 
 #df_phone, #df_contact_form{
@@ -373,8 +382,37 @@ vertical-align h1{
 }
 
 
+.bottom_ledge{
+    background-color: #28bca5;
+    border-top: #0f8875 solid 2px;
+}
+
+#df_footer_about #logo{
+  padding:0;
+}
+
+.bottom_ledge{
+  margin-top: 60px;
+  padding: 22px 0;
+}
+
+.bottom_ledge p{
+  color: #ffffff;
+}
+
+
+.bottom_info{
+  background-color: #5c5d5d;
+  padding: 15px 0;
+  color: #ffffff;
+}
 
 /********* Overwrites ********/
+
+.form-control {
+  border: none;
+  border-radius: 0;
+}
 
 
 ul, menu, dir {
@@ -457,6 +495,14 @@ ul, menu, dir {
 
 
 @media (min-width: 320px){
+
+#df_search #searchform {
+    margin-right: 0;
+    margin-bottom: 15px;
+    float: right;
+}
+
+
   #df_header{
     background-color: #5c5d5d;
   }
@@ -499,9 +545,41 @@ ul, menu, dir {
     color: #fff;
 }
 
+#df_phone {
+    color: #ffffff;
+    margin-right: 17px;
+}
+
+.btn {
+    padding: 11px 17px;
+    border-radius: 0;
+}
+
+.btn-info {
+    color: #28bca5;
+    background-color: #fff;
+    border: none;
+}
+
+.btn-info:hover {
+    color: #28bca5;
+    background-color: #fff;
+    border: none;
+}
+
+
 }
 
 @media (min-width: 768px){
+
+  #df_search #searchform {
+    margin-bottom: 0;
+}
+
+  #df_search #searchform {
+    margin-right: 0px;
+    float: right;
+}
 
   #df_header .navbar-collapse {
   padding-right: 15px;
@@ -533,6 +611,11 @@ ul, menu, dir {
 }
 
 @media (min-width: 1024px){
+
+  #df_search #searchform {
+    margin-right: 0px;
+    float: right;
+}
 
   #df_header .navbar-collapse {
   padding-right: 15px;

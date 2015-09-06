@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php bloginfo('name') ?></title>
 
-<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_directory'); ?>/css/jquery.bxslider.css">
-
 <?php wp_head(); ?>
 
 </head>
@@ -53,16 +51,7 @@
                     </div>
 
                 </div>
-
-            </div>
-
-        </div>
-
-        <div class="col-lg-6 col-md-6 col-sm-6">
-
-            <div class="df_search_login">
-
-                <div class=" btn-group pull-right" role="group">
+                <div class=" btn-group pull-right hidden-lg hidden-md hidden-sm" role="group">
 
                     <button type="button" class="btn btn-default dropdown-toggle ledger-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 
@@ -82,11 +71,70 @@
 
                 </div>
 
-                <div id="df_search" class="pull-right">
+            </div>
 
-                    <?php get_search_form(); ?>
+        </div>
+
+        <div class="col-lg-6 col-md-6 col-sm-6">
+
+            <div class="df_search_login">
+
+                <div id="df_login">
+
+                <div class="btn-group hidden-xs" role="group">
+
+                    <button type="button" class="btn btn-default dropdown-toggle ledger-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+
+                        <span class="glyphicon glyphicon-user white ledge-glyf"></span> Sign-in
+
+                    </button>
+
+                    <ul class="dropdown-menu ledger-dd">
+
+                        <div class="df_user_login">
+
+                            <?php wp_login_form(); ?>
+
+                        </div>
+
+                    </ul>
 
                 </div>
+
+            </div>
+            <div class="row">
+
+            <div id="df_search" div class="col-lg-6 col-md-9 col-sm-8 col-xs-12">
+
+                <form role="search" method="get" id="searchform" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+
+                    <div id="custom-search-input">
+
+                        <div class="input-group col-md-12">
+
+                            <input type="text" class="form-control input-lg" value="<?php echo get_search_query(); ?>" placeholder="Search..." />
+
+                            <span class="input-group-btn">
+
+                                <button class="btn btn-info btn-lg" type="button" value="<?php echo esc_attr_x( 'Search', 'submit button' ); ?>">
+
+                                    <i class="glyphicon glyphicon-search"></i>
+
+                                </button>
+
+                            </span>
+
+                        </div>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+            <div class="clearfix"></div>
 
             </div>
 

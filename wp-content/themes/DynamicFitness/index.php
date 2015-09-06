@@ -86,7 +86,7 @@ get_header(); ?>
 
 	<div class="container fadeInBlock">
 
-		<h1>Home Page x</h1>
+		<h1>Home Page</h1>
 
 		<p><?php the_content(); ?></p>
 
