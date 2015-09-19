@@ -8,8 +8,16 @@ body{
   color: #ffffff;
 }
 
+.teal{
+  background-color: #28bca5;
+}
+
 .darkgray{
   color: #5c5d5d;
+}
+
+.darkgray-bg{
+  background-color: #5c5d5d;
 }
 
 .bxslider li{
@@ -407,6 +415,89 @@ vertical-align h1{
   color: #ffffff;
 }
 
+#info_background{
+  background: -moz-linear-gradient(left, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left, rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+background: linear-gradient(to right, rgba(0,0,0,1) 0%,rgba(255,255,255,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#00ffffff',GradientType=1 ); /* IE6-9 */
+}
+
+.site_intro{
+  background-image: url('../img/intro_photo.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+
+#info_background{
+  padding: 50px 0;
+}
+
+.site_intro #intro_header h1{
+  font-size: 40px;
+}
+
+.site_intro p{
+  font-size: 14px;
+  color: #ffffff;
+}
+
+#social_container{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+#social_container h2,
+#social_container p{
+  text-align: center;
+  color: #ffffff;
+}
+
+#social_container span#facebook:hover{
+  background-color: #3B5998;
+}
+
+#social_container span#twitter:hover{
+  background-color: #00ACED;
+}
+
+#social_container span#youtube:hover{
+  background-color: #CD332D;
+}
+
+#social_container span#linkedin:hover{
+  background-color: #007FB1;
+}
+
+#social_container span#instagram:hover{
+  background-color: #3F729B;
+}
+
+
+#social_container #qt_container span{
+  display: block;
+  margin-right: 54px;
+}
+
+.last{
+  display: block;
+  margin-right: 0 !important; 
+}
+
+.social{
+  width: 75px;
+  float: left;
+}
+
+#qt_container{
+  width: 51%;
+  margin: 0px auto;
+  padding-top: 15px;
+}
+
 /********* Overwrites ********/
 
 .form-control {
@@ -572,6 +663,8 @@ ul, menu, dir {
 
 @media (min-width: 768px){
 
+  /* Col-sm */
+
   #df_search #searchform {
     margin-bottom: 0;
 }
@@ -612,6 +705,17 @@ ul, menu, dir {
 
 @media (min-width: 1024px){
 
+  /* Col-md */
+
+#social_container #qt_container span {
+    display: block;
+    margin-right: 55px;
+}
+
+.vertical-align-wrap {
+    height: 425px;
+}
+
   #df_search #searchform {
     margin-right: 0px;
     float: right;
@@ -647,6 +751,13 @@ ul, menu, dir {
 }
 
 @media (min-width: 1199px){
+
+/* Col-lg */
+
+.vertical-align-wrap {
+    height: 597px;
+}
+
 #df_header .navbar-collapse {
   padding-right: 15px;
   padding-left: 15px;
