@@ -160,28 +160,54 @@ get_header(); ?>
 
 					<h2>Recent Workouts:</h2>
 					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p>
-					<a href="" class="df_workout_btn">Search Workouts</a>
+					<a href="" class="df_workout_btn teal">Search Workouts</a>
 
 				</div>
 
-
-
 					<?php
 					//vars
-					$the_query = new WP_Query ( '$args' ); ?>
+					$custom_args = array(
+				'category_name' => 'workout_routine',
+      'post_type' => 'post',
+      'posts_per_page' => 3,
+    );
 
-					<?php if ( $the_query->have_posts() ) : ?>
+  $custom_query = new WP_Query( $custom_args ); ?>
 
-					<div class="col-lg-4">
+  <?php if ( $custom_query->have_posts() ) : ?>
 
-					<?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+    <!-- the loop -->
+    <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+
+					<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+
+					<ul class="bxslider">
+
+					<?php if (get_field ( 'slider' )) : while( has_sub_field( 'slider' )) :
+
+						//vars
+						$main_hero_image = get_sub_field('slide_image');
+
+					?>
+
+					<li>
+
+						<img src="<?php echo $main_hero_image['url']; ?>" class="img-responsive"/>
+
+					</li>
+
+					<?php  break; endwhile; endif; ?>
+
+					</ul>
 					
 					    <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-					    <?php the_content(); ?>
+					    <?php the_excerpt(); ?>
+
+					    </div>
 					
 					<?php endwhile; ?>
 
-					</div>
+					
 
 					<?php endif; ?>
 
@@ -189,6 +215,64 @@ get_header(); ?>
 
 		</div>
 
+
+	</div>
+
+	<div class="trainers fadeInBlock teal">
+
+		<div class="container">
+
+			<div class="row">
+
+			<?php
+			//vars
+			$custom_args = array(
+				'category_name' => 'trainers',
+		      'post_type' => 'post',
+		      'posts_per_page' => 3,
+		    );
+
+		  $custom_query = new WP_Query( $custom_args ); ?>
+
+  <?php if ( $custom_query->have_posts() ) : ?>
+
+    <!-- the loop -->
+    <?php while ( $custom_query->have_posts() ) : $custom_query->the_post(); ?>
+
+							<div class="col-lg-3">
+
+								<ul class="bxslider">
+
+					<?php if (get_field ( 'slider' )) : while( has_sub_field( 'slider' )) :
+
+						//vars
+						$main_hero_image = get_sub_field('slide_image');
+
+					?>
+
+					<li>
+
+						<img src="<?php echo $main_hero_image['url']; ?>" class="img-responsive"/>
+
+					</li>
+
+					<?php  break; endwhile; endif; ?>
+
+					</ul>
+
+								<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+
+								<?php the_content(); ?>
+
+							</div>
+
+						<?php endwhile; ?>
+
+					<?php endif; ?>
+
+		</div>
+
+	</div>
 
 	</div>
 

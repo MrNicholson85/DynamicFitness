@@ -498,6 +498,33 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', end
   padding-top: 15px;
 }
 
+#df_workout_blk .df_workout_btn{
+  text-align: center;
+  padding: 15px;
+  color: #ffffff;
+  margin: 10px auto;
+  display: block;
+  width: 160px;
+
+}
+
+#df_workout_blk .df_workout_btn:hover{
+  text-decoration: none;
+}
+
+#df_workout_blk h2,
+#df_workout_blk p{
+  text-align: center;
+}
+
+#df_workout_blk{
+  margin-bottom: 30px;
+}
+
+#df_workout_blk p{
+  padding: 15px 0;
+}
+
 /********* Overwrites ********/
 
 .form-control {
